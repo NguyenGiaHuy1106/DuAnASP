@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <div class="text-center">
+
+            <img src="https://cdn.honda.com.vn/motorbikes/August2020/T0IMBNB1kz8bv6GHlfLX.png" width="100%" height="350" />
+
+        </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #26272b ">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="TrangChu"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <div class="box">
+                        <link rel="stylesheet" href="~/css/Search.css" />
+                        <div class="container-4">
+                            <input type="search" id="search" placeholder="Search..." />
+                            <button class="icon"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link " style="color:#ffffff" asp-area="" asp-controller="Home" asp-action="TrangChu">Trang Chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " style="color:#ffffff" asp-area="" asp-controller="Home" asp-action="Shop">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " style="color:#ffffff" asp-area="" asp-controller="Home" asp-action="DangKy">Đăng ký</a>
+                        </li>
+                        <li>
+                            <a class="nav-link " style="color:#ffffff" asp-area="" asp-controller="Khoes" asp-action="User">Kho </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <!--Important link from source https://bootsnipp.com/snippets/rlXdE-->
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <!-- Footer -->
+    <section id="footer">
+        <link rel="stylesheet" href="~/css/Footer.css" />
+        <div class="container">
+            <div class="row text-center text-xs-center text-sm-left text-md-left">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Phân Khối Lớn</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Sản phẩm</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phụ tùng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phụ kiện</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Dịch vụ sau bán hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Phân Khối Trung</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Sản phẩm</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phụ tùng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phụ kiện</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Dịch vụ sau bán hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <h5>Phân Khối Nhỏ</h5>
+                    <ul class="list-unstyled quick-links">
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Sản phẩm</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phụ tùng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Phụ kiện</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Dịch vụ sau bán hàng</a></li>
+                        <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                    <ul class="list-unstyled list-inline social text-center">
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                </hr>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+                    <p><u><a href="">Motocrycle Shop</a></u> web được tạo ra nhằm mục đích học tập</p>
+                    <p class="h6">© 2019. Copyright by Motocrycle Shop<a class="text-green ml-2" href="" target="_blank">Sunlimetech</a></p>
+                </div>
+                </hr>
+            </div>
+        </div>
+    </section>
+    <!-- ./Footer -->
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

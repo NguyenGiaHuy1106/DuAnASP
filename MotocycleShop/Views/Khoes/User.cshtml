@@ -1,0 +1,64 @@
+﻿@model MotocycleShop.Models.KhoPhanKhucViewModel
+
+
+@{
+    ViewData["Title"] = "Kho";
+}
+
+<h1>Kho</h1>
+
+<p>
+    <a asp-action="Create">Tạo Mới</a>
+</p>
+<form asp-controller="Khoes" asp-action="User" method="get">
+    <p>
+        <select asp-for="KhoPhanKhuc" asp-items="Model.PhanKhuc">
+            <option value="">All</option>
+        </select>
+        Tên: <input type="text" name="SearchString" />
+        <input type="submit" value="Tìm" />
+    </p>
+</form>
+<table class="table" style="border:double">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoes[0].Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoes[0].NgayNhap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoes[0].PhanKhuc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Khoes[0].Gia)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Khoes)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ten)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayNhap)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhanKhuc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gia)
+                </td>
+                <td>
+                    
+                    <a asp-action="UserDetails" asp-route-id="@item.Id">Chi Tiết</a> 
+                   
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
